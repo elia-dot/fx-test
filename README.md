@@ -19,12 +19,12 @@ To run this project locally, do the following:
 
 1. Clone the repo from the command line:
     ```sh
-    git clone https://github.com/your-repo-link-here.git
+    git clone https://github.com/fx-test.git
     ```
     
 2. Navigate to the project's root directory:
     ```sh
-    cd your-project-directory
+    cd fx-test
     ```
 
 3. Install the dependencies:
