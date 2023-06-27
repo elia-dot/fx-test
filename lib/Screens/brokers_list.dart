@@ -1,10 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:myfxbook/Providers/brokers_providers.dart';
 import 'package:myfxbook/Screens/broker_info.dart';
+import 'package:myfxbook/models/broker.dart';
 import 'package:provider/provider.dart';
 
 class BrokersList extends StatelessWidget {
   const BrokersList({super.key});
+
+  void navigateToBroker(BuildContext context, Broker broker) {
+    Navigator.of(context).pushNamed(
+      BrokerInfo.routeName,
+      arguments: broker,
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -14,6 +22,7 @@ class BrokersList extends StatelessWidget {
       separatorBuilder: (context, index) => const Divider(),
       itemBuilder: (context, index) {
         return ListTile(
+          onTap: () => navigateToBroker(context, brokers[index]),
           leading: Image.network(
             "https://www.myfxbook.com/images/brokers/${brokers[index].logo}",
             width: 50,
@@ -30,10 +39,7 @@ class BrokersList extends StatelessWidget {
             ],
           ),
           trailing: ElevatedButton(
-            onPressed: () => Navigator.of(context).pushNamed(
-              BrokerInfo.routeName,
-              arguments: brokers[index],
-            ),
+            onPressed: () => navigateToBroker(context, brokers[index]),
             style: ElevatedButton.styleFrom(
               backgroundColor: Theme.of(context).colorScheme.primary,
               shape: const RoundedRectangleBorder(
