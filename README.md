@@ -1,16 +1,38 @@
-# myfxbook
+The application is a cross-platform that runs on both iOS and Android platforms. 
 
-A new Flutter project.
+## Screens
+The application comprises two main screens:
+
+1. **Main Screen:** This is the first screen users see when they launch the application. It is responsible for fetching the brokers' data from a network source, handling loading and error states, and displaying a list of brokers. 
+
+2. **Broker Info Screen:** This screen is accessed by selecting a broker from the list displayed in the Main Screen. It shows the detailed information of the selected broker.
+
+## Dependencies
+
+1. **http:** Used to manage all the network requests within the application.
+
+2. **provider:** A state management solution that is used to handle simple state management needs for this application.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+To run this project locally, do the following:
 
-A few resources to get you started if this is your first Flutter project:
+1. Clone the repo from the command line:
+    ```sh
+    git clone https://github.com/your-repo-link-here.git
+    ```
+    
+2. Navigate to the project's root directory:
+    ```sh
+    cd your-project-directory
+    ```
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+3. Install the dependencies:
+    ```sh
+    flutter pub get
+    ```
+    
+4. To run the project, execute:
+    ```sh
+    flutter run
+    ```
